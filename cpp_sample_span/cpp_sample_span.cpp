@@ -35,12 +35,6 @@ int main()
 
 	std::vector<int32_t> data_vector = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
-	std::vector<std::vector<int32_t>> data_2d_vector = {
-		{1, 2, 3, 4, 5},
-		{6, 7, 8, 9, 10},
-		{11, 12, 13, 14, 15}
-	};
-
 	std::span<int32_t> data_span(data_vector);
 
 	auto sub_span_3_6 = data_span.subspan(2, 5); // span over first 3 elements
@@ -48,5 +42,5 @@ int main()
 	auto sub_span_last_4 = data_span.last(4);     // span over last 4 elements
 
 
-	std::cout << olk::print::print_range(data_vector, "data vector") << olk::print::print_range(data_2d_vector);
+	std::cout << olk::print::print_range(data_vector, "data vector");
 }

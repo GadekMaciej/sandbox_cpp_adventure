@@ -5,25 +5,25 @@
 
 namespace olk::concepts
 {
-	/* Concept checking if a type is formattable via std::format */
-	template<typename formattable_type, typename char_type = char>
-	concept formattable = requires { typename std::formatter<formattable_type, char_type>; };
+	///* Concept checking if a type is formattable via std::format */
+	//template<typename formattable_type, typename char_type = char>
+	//concept formattable = requires { typename std::formatter<formattable_type, char_type>; };
 
-	template<typename T>
-	concept Formattable = requires(T t) 
-	{
-		{ std::format("{}", t) } -> std::convertible_to<std::string>;
-	};
+	//template<typename T>
+	//concept Formattable = requires(T t) 
+	//{
+	//	{ std::format("{}", t) } -> std::convertible_to<std::string>;
+	//};
 
-	template<typename T>
-	concept formattable = requires (T & v, std::format_context ctx) {
-		std::formatter<std::remove_cvref_t<T>>().format(v, ctx);
-	};
+	//template<typename T>
+	//concept formattable = requires (T & v, std::format_context ctx) {
+	//	std::formatter<std::remove_cvref_t<T>>().format(v, ctx);
+	//};
 
-	template<typename T>
-	concept formattable = requires (T & v, std::format_context ctx) {
-		std::formatter<std::remove_cvref_t<T>>().format(v, ctx);
-	};
+	//template<typename T>
+	//concept formattable = requires (T & v, std::format_context ctx) {
+	//	std::formatter<std::remove_cvref_t<T>>().format(v, ctx);
+	//};
 
 
 

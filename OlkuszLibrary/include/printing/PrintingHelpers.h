@@ -8,7 +8,7 @@ namespace olk::print
 {
 	/* TODO: support for recursive ranges */
 	template<std::ranges::input_range range_type>
-	requires olk::concepts::formattable<std::ranges::range_value_t<range_type>>
+	//requires olk::concepts::formattable<std::ranges::range_value_t<range_type>>
 	std::string print_range(
 		range_type&& in_range,
 		std::string_view in_label = "Vector", 

@@ -1,0 +1,12 @@
+{
+  "version": 4,
+  "configurePresets": [
+    {
+      "name": "build-folder-preset",
+      "binaryDir": "${sourceDir}/build",
+      "cacheVariables": {
+        "TUTORIAL_USE_STD_SQRT": "ON"
+      }
+    }
+  ]
+}
